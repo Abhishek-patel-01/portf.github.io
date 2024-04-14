@@ -326,13 +326,13 @@ nav .fas{
 @media only screen and (max-width: 600px){
     #header{
         background-image: url(gg.gif);
-        /* background-repeat: no-repeat;
-        background-position: bottom;  */
+        background-repeat: no-repeat;
+        background-position: bottom; 
 
 
      }
      .header-text{
-        margin-top: 100%;
+        margin-top: 50%;
         font-size: 16px;
      }
      .header-text h1{
