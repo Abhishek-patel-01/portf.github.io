@@ -406,3 +406,13 @@ nav .fas{
         background: #ff004f;
         /* background: #555;  */
   }
+  
+/* ----------scroll animation-------- */
+
+.js-scroll {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+  .js-scroll.scrolled {
+    opacity: 5;
+  }

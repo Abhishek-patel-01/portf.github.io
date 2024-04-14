@@ -36,7 +36,7 @@
     </div>
     <!-- ------------about--------- -->
     <div id="About">
-        <div class="container">
+        <div class="container js-scroll">
             <div class="row">
                 <div class="about-col-1">
                     <img src="./Passport.png" alt="">
@@ -78,7 +78,7 @@
     </div>
     <!-- ---------services---------->
     <div id="services">
-        <div class="container">
+        <div class="container js-scroll">
             <h1 class="sub-title">My services</h1>
             <div class="services-list">
                 <div>
@@ -110,7 +110,7 @@
     </div>
     <!-- -------------portfolio-------------->
     <div id="portfolio">
-        <div class="container">
+        <div class="container js-scroll">
             <h1 class="sub-title">My work</h1>
             <div class="work-list">
                 <div class="work">
@@ -146,7 +146,7 @@
     </div>
 <!-- ----------contact--------- -->
 <div id="contact">
-    <div class="container">
+    <div class="container js-scroll">
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
@@ -160,7 +160,7 @@
                     </div>
                     <a href="" download class="btn btn2">Download CV</a>
             </div>
-            <div class="contact-right">
+            <div class="contact-right js-scroll">
                 <form>
                     <input type="text" name="Name" placeholder="Your name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
@@ -201,6 +201,30 @@
         function closemenu(){
             sidemenu.style.right="-200px";
         }
+    </script>
+    <!-- ------Scroll animation----------- -->
+    <script>
+      const scrollElements = document.querySelectorAll('.js-scroll');
+      const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+          if (isElementInViewport(el)) {
+            el.classList.add('scrolled');
+          }
+        }
+      );
+    };
+    
+    const isElementInViewport = (el) => {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    };
+    
+    window.addEventListener('scroll', handleScrollAnimation);
     </script>
 </body>
 </html>
